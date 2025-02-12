@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\CategorieRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: CategorieRepository::class)]
@@ -18,6 +20,17 @@ class Categorie
 
     #[ORM\Column(length: 255)]
     private ?string $label = null;
+
+    /**
+     * @var Collection<int, CategoriesMedia>
+     */
+    #[ORM\OneToMany(targetEntity: CategoriesMedia::class, mappedBy: 'category')]
+    private Collection $categoriesMedia;
+
+    public function __construct()
+    {
+        $this->categoriesMedia = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -44,6 +57,36 @@ class Categorie
     public function setLabel(string $label): static
     {
         $this->label = $label;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, CategoriesMedia>
+     */
+    public function getCategoriesMedia(): Collection
+    {
+        return $this->categoriesMedia;
+    }
+
+    public function addCategoriesMedium(CategoriesMedia $categoriesMedium): static
+    {
+        if (!$this->categoriesMedia->contains($categoriesMedium)) {
+            $this->categoriesMedia->add($categoriesMedium);
+            $categoriesMedium->setCategory($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCategoriesMedium(CategoriesMedia $categoriesMedium): static
+    {
+        if ($this->categoriesMedia->removeElement($categoriesMedium)) {
+            // set the owning side to null (unless already changed)
+            if ($categoriesMedium->getCategory() === $this) {
+                $categoriesMedium->setCategory(null);
+            }
+        }
 
         return $this;
     }

@@ -13,8 +13,38 @@ class MediaLanguage
     #[ORM\Column]
     private ?int $id = null;
 
+    #[ORM\ManyToOne(inversedBy: 'mediaLanguages')]
+    private ?Media $media = null;
+
+    #[ORM\ManyToOne(inversedBy: 'mediaLanguages')]
+    private ?Language $language = null;
+
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function getMedia(): ?Media
+    {
+        return $this->media;
+    }
+
+    public function setMedia(?Media $media): static
+    {
+        $this->media = $media;
+
+        return $this;
+    }
+
+    public function getLanguage(): ?Language
+    {
+        return $this->language;
+    }
+
+    public function setLanguage(?Language $language): static
+    {
+        $this->language = $language;
+
+        return $this;
     }
 }

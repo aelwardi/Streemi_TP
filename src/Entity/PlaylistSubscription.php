@@ -18,7 +18,7 @@ class PlaylistSubscription
     private ?\DateTimeInterface $subscribedAt = null;
 
     #[ORM\ManyToOne(inversedBy: 'playlistSubscriptions')]
-    private ?User $userId = null;
+    private ?User $user = null;
 
     #[ORM\ManyToOne(inversedBy: 'playlistSubscriptions')]
     private ?Playlist $playlist = null;
@@ -40,14 +40,14 @@ class PlaylistSubscription
         return $this;
     }
 
-    public function getUserId(): ?User
+    public function getUser(): ?User
     {
-        return $this->userId;
+        return $this->user;
     }
 
-    public function setUserId(?User $userId): static
+    public function setUserId(?User $user): static
     {
-        $this->userId = $userId;
+        $this->user = $user;
 
         return $this;
     }

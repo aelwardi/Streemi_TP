@@ -47,31 +47,31 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     /**
      * @var Collection<int, SubscriptionHistory>
      */
-    #[ORM\OneToMany(targetEntity: SubscriptionHistory::class, mappedBy: 'userId')]
+    #[ORM\OneToMany(targetEntity: SubscriptionHistory::class, mappedBy: 'user')]
     private Collection $subscriptionHistories;
 
     /**
      * @var Collection<int, Playlist>
      */
-    #[ORM\OneToMany(targetEntity: Playlist::class, mappedBy: 'userId')]
+    #[ORM\OneToMany(targetEntity: Playlist::class, mappedBy: 'user')]
     private Collection $playlists;
 
     /**
      * @var Collection<int, PlaylistSubscription>
      */
-    #[ORM\OneToMany(targetEntity: PlaylistSubscription::class, mappedBy: 'userId')]
+    #[ORM\OneToMany(targetEntity: PlaylistSubscription::class, mappedBy: 'user')]
     private Collection $playlistSubscriptions;
 
     /**
      * @var Collection<int, Comment>
      */
-    #[ORM\OneToMany(targetEntity: Comment::class, mappedBy: 'userId')]
+    #[ORM\OneToMany(targetEntity: Comment::class, mappedBy: 'user')]
     private Collection $comments;
 
     /**
      * @var Collection<int, WatchHistory>
      */
-    #[ORM\OneToMany(targetEntity: WatchHistory::class, mappedBy: 'userId')]
+    #[ORM\OneToMany(targetEntity: WatchHistory::class, mappedBy: 'user')]
     private Collection $watchHistories;
 
     public function __construct()

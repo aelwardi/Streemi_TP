@@ -24,7 +24,7 @@ class Comment
     private ?StatusComment $status = null;
 
     #[ORM\ManyToOne(inversedBy: 'comments')]
-    private ?User $userId = null;
+    private ?User $user = null;
 
     #[ORM\ManyToOne(inversedBy: 'comments')]
     private ?Media $media = null;
@@ -72,14 +72,14 @@ class Comment
         return $this;
     }
 
-    public function getUserId(): ?User
+    public function getUser(): ?User
     {
-        return $this->userId;
+        return $this->user;
     }
 
-    public function setUserId(?User $userId): static
+    public function setUser(?User $user): static
     {
-        $this->userId = $userId;
+        $this->user = $user;
 
         return $this;
     }

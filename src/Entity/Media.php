@@ -38,6 +38,9 @@ class Media
     #[ORM\Column]
     private array $staff = [];
 
+    #[ORM\Column]
+    private array $cast = [];
+
     #[ORM\Column(enumType: MediaType::class)]
     private ?MediaType $mediaType = null;
 
@@ -153,6 +156,18 @@ class Media
     public function setStaff(array $staff): static
     {
         $this->staff = $staff;
+
+        return $this;
+    }
+
+    public function getCast(): array
+    {
+        return $this->cast;
+    }
+
+    public function setCast(array $cast): static
+    {
+        $this->cast = $cast;
 
         return $this;
     }

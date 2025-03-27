@@ -55,41 +55,7 @@
                 <div class="max-w-3xl mx-auto">
                     <h2 class="text-lg font-medium text-black">Les <span class="font-bold text-red-600">épisodes</span></h2>
                     <ul>
-                        <!-- Episode -->
-                        <li class="mt-4 flex flex-row gap-y-5 p-4 rounded-lg transition cursor-pointer hover:bg-gray-100">
-                            <div class="relative flex flex-col rounded-xl w-1/5 overflow-hidden aspect-square border cursor-pointer transition hover:shadow-md bg-center bg-cover" style="background-image: url('https://www.numerama.com/wp-content/uploads/2024/05/psych-shawn-kate-gus.jpg')">
-                                <div class="absolute top-0 left-0 w-full h-full bg-black/10 flex items-center justify-center text-white hover:bg-black/60 transition opacity-10 hover:opacity-100">
-                                    <svg class="h-12 w-12 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <title>play</title>
-                                        <path d="M8,5.14V19.14L19,12.14L8,5.14Z"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="flex items-start justify-center w-4/5 flex-col pl-8">
-                                <h2 class="font-bold text-xl">Un médium de trop</h2>
-                                <h3 class="font-medium text-lg text-black/70">S4 - E01</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias autem exercitationem harum natus necessitatibus nesciunt provident quasi quo sint tenetur.</p>
-                            </div>
-                        </li>
-                        <!-- /Episode -->
-
-                        <!-- Episode -->
-                        <li class="mt-4 flex flex-row gap-y-5 p-4 rounded-lg transition cursor-pointer hover:bg-gray-100">
-                            <div class="relative flex flex-col rounded-xl w-1/5 overflow-hidden aspect-square border cursor-pointer transition hover:shadow-md bg-center bg-cover" style="background-image: url('https://www.numerama.com/wp-content/uploads/2024/05/shawn-gus-psych.jpg')">
-                                <div class="absolute top-0 left-0 w-full h-full bg-black/10 flex items-center justify-center text-white hover:bg-black/60 transition opacity-10 hover:opacity-100">
-                                    <svg class="h-12 w-12 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <title>play</title>
-                                        <path d="M8,5.14V19.14L19,12.14L8,5.14Z"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="flex items-start justify-center w-4/5 flex-col pl-8">
-                                <h2 class="font-bold text-xl">Mort par un dino</h2>
-                                <h3 class="font-medium text-lg text-black/70">S4 - E02</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias autem exercitationem harum natus necessitatibus nesciunt.</p>
-                            </div>
-                        </li>
-                        <!-- /Episode -->
+                        {% include 'details/parts/_episode.html.twig' %}
                     </ul>
                 </div>
             </section>
@@ -128,74 +94,13 @@
                 <div class="max-w-3xl mx-auto mt-9">
                     <h2 class="text-lg font-medium text-black"><span class="font-bold text-red-600">Équipe</span> du film</h2>
                     <ul class="mt-9 grid grid-cols-2 sm:grid-cols-4 gap-x-5 gap-y-5">
-                        <li class="relative rounded-xl overflow-hidden transition cursor-pointer hover:scale-105 hover:opacity-90 hover:shadow-md min-h-56">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Steve_Franks_by_Gage_Skidmore.jpg/440px-Steve_Franks_by_Gage_Skidmore.jpg" class="object-cover h-full w-full -z-10" alt="">
-                            <div class="absolute top-0 h-full w-full bg-gradient-to-t from-black/50 p-3 flex flex-col justify-end">
-                                <div class="self-center flex flex-col items-center space-y-2">
-                                    <span class="capitalize text-white font-medium drop-shadow-md">Steve Franks</span>
-                                    <span class="text-gray-100 text-xs">Scénarise</span>
-                                </div>
-                            </div>
-                        </li>
+                        {% include 'details/parts/_staff.html.twig' %}
                     </ul>
                 </div>
                 <div class="max-w-3xl mx-auto mt-9">
                     <h2 class="text-lg font-medium text-black">Le <span class="font-bold text-red-600">Casting</span></h2>
                     <ul class="mt-9 grid grid-cols-2 sm:grid-cols-4 gap-x-5 gap-y-5">
-                        <li class="relative rounded-xl overflow-hidden transition cursor-pointer hover:scale-105 hover:opacity-90 hover:shadow-md">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/James_Roday_by_Gage_Skidmore.jpg/306px-James_Roday_by_Gage_Skidmore.jpg" class="object-cover h-full w-full -z-10" alt="">
-                            <div class="absolute top-0 h-full w-full bg-gradient-to-t from-black/50 p-3 flex flex-col justify-end">
-                                <div class="self-center flex flex-col items-center space-y-2">
-                                    <span class="capitalize text-white font-medium drop-shadow-md">James Roday</span>
-                                    <span class="text-gray-100 text-xs truncate">Shawn Spencer</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="relative rounded-xl overflow-hidden transition cursor-pointer hover:scale-105 hover:opacity-90 hover:shadow-md">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Dule_Hill_by_Gage_Skidmore.jpg/313px-Dule_Hill_by_Gage_Skidmore.jpg" class="object-cover h-full w-full -z-10" alt="">
-                            <div class="absolute top-0 h-full w-full bg-gradient-to-t from-black/50 p-3 flex flex-col justify-end">
-                                <div class="self-center flex flex-col items-center space-y-2">
-                                    <span class="capitalize text-white font-medium drop-shadow-md">Dulé Hill</span>
-                                    <span class="text-gray-100 text-xs truncate">Burton « Gus » Guster</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="relative rounded-xl overflow-hidden transition cursor-pointer hover:scale-105 hover:opacity-90 hover:shadow-md">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Timothy_Omundson_by_Gage_Skidmore.jpg/280px-Timothy_Omundson_by_Gage_Skidmore.jpg" class="object-cover h-full w-full -z-10" alt="">
-                            <div class="absolute top-0 h-full w-full bg-gradient-to-t from-black/50 p-3 flex flex-col justify-end">
-                                <div class="self-center flex flex-col items-center space-y-2">
-                                    <span class="capitalize text-white font-medium drop-shadow-md">Timothy Omundson</span>
-                                    <span class="text-gray-100 text-xs truncate">Carlton J. Lassiter</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="relative rounded-xl overflow-hidden transition cursor-pointer hover:scale-105 hover:opacity-90 hover:shadow-md">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Maggie_Lawson_by_Gage_Skidmore.jpg/294px-Maggie_Lawson_by_Gage_Skidmore.jpg" class="object-cover h-full w-full -z-10" alt="">
-                            <div class="absolute top-0 h-full w-full bg-gradient-to-t from-black/50 p-3 flex flex-col justify-end">
-                                <div class="self-center flex flex-col items-center space-y-2">
-                                    <span class="capitalize text-white font-medium drop-shadow-md">Maggie Lawson</span>
-                                    <span class="text-gray-100 text-xs truncate">Juliet O'Hara</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="relative rounded-xl overflow-hidden transition cursor-pointer hover:scale-105 hover:opacity-90 hover:shadow-md">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Kirsten_Nelson_by_Gage_Skidmore.jpg/295px-Kirsten_Nelson_by_Gage_Skidmore.jpg" class="object-cover h-full w-full -z-10" alt="">
-                            <div class="absolute top-0 h-full w-full bg-gradient-to-t from-black/50 p-3 flex flex-col justify-end">
-                                <div class="self-center flex flex-col items-center space-y-2">
-                                    <span class="capitalize text-white font-medium drop-shadow-md">Kirsten Nelson</span>
-                                    <span class="text-gray-100 text-xs truncate">Cheffe Karen Vick</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="relative rounded-xl overflow-hidden transition cursor-pointer hover:scale-105 hover:opacity-90 hover:shadow-md">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Corbin_Bernsen_by_Gage_Skidmore.jpg/314px-Corbin_Bernsen_by_Gage_Skidmore.jpg" class="object-cover h-full w-full -z-10" alt="">
-                            <div class="absolute top-0 h-full w-full bg-gradient-to-t from-black/50 p-3 flex flex-col justify-end">
-                                <div class="self-center flex flex-col items-center space-y-2">
-                                    <span class="capitalize text-white font-medium drop-shadow-md">Corbin Bernsen</span>
-                                    <span class="text-gray-100 text-xs truncate">Henry Spencer</span>
-                                </div>
-                            </div>
-                        </li>
+                        {% include 'details/parts/_casting.html.twig' %}
                     </ul>
                 </div>
                 <div class="max-w-3xl mx-auto mt-9">
@@ -210,78 +115,7 @@
                 <div class="max-w-3xl mx-auto">
                     <h2 class="text-lg font-medium text-black">Les <span class="font-bold text-red-600">commentaires</span></h2>
                     <ul class="space-y-4">
-                        <!-- Comment -->
-                        <li class="mt-9">
-                            <div class="bg-gray-100 p-4 rounded-lg">
-                                <div class="flex items-center">
-                                    <img src="https://random.imagecdn.app/100/100?a" class="w-10 h-10 rounded-full" alt="">
-                                    <div class="ml-4 w-full">
-                                        <span class="font-medium">John Doe</span>
-                                        <span class="text-xs text-gray-500 flex items-center justify-between w-full">
-                                        <span>Il y a 2 jours</span>
-                                        <span></span>
-                                    </span>
-                                    </div>
-                                </div>
-                                <p class="mt-4 w-full">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, consectetur deleniti deserunt ducimus harum iusto laboriosam minima nobis obcaecati odit officiis omnis quibusdam repellat repudiandae totam voluptas, voluptatem voluptatibus voluptatum.</p>
-                            </div>
-                        </li>
-                        <!-- /Comment -->
-
-                        <!-- Comment -->
-                        <li class="mt-9 pl-9 border-l-4">
-                            <div class="bg-gray-100 p-4 rounded-lg">
-                                <div class="flex items-center">
-                                    <img src="https://random.imagecdn.app/100/100?b" class="w-10 h-10 rounded-full" alt="">
-                                    <div class="ml-4 w-full">
-                                        <span class="font-medium">Jane Doe</span>
-                                        <span class="text-xs text-gray-500 flex items-center justify-between w-full">
-                                        <span>Il y a 4 heures</span>
-                                        <span></span>
-                                    </span>
-                                    </div>
-                                </div>
-                                <p class="mt-4 w-full">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, consectetur deleniti deserunt ducimus harum iusto laboriosam minima nobis obcaecati.</p>
-                            </div>
-                        </li>
-                        <!-- /Comment -->
-
-                        <!-- Comment -->
-                        <li class="mt-9 pl-9 border-l-4">
-                            <div class="bg-gray-100 p-4 rounded-lg">
-                                <div class="flex items-center">
-                                    <img src="https://random.imagecdn.app/100/100?c" class="w-10 h-10 rounded-full" alt="">
-                                    <div class="ml-4 w-full">
-                                        <span class="font-medium">Marco Doe</span>
-                                        <span class="text-xs text-gray-500 flex items-center justify-between w-full">
-                                        <span>Il y a 1 heures</span>
-                                        <span></span>
-                                    </span>
-                                    </div>
-                                </div>
-                                <p class="mt-4 w-full">Lorem ipsum dolor sit amet !!</p>
-                            </div>
-                        </li>
-                        <!-- /Comment -->
-
-                        <!-- Comment -->
-                        <li class="mt-9 pl-9 border-l-4 relative cursor-not-allowed">
-                            <span class="absolute top-2 right-2 px-3 py-1 bg-orange-100 rounded-md">En attente de vérification</span>
-                            <div class="bg-gray-100 p-4 rounded-lg opacity-40">
-                                <div class="flex items-center">
-                                    <img src="https://random.imagecdn.app/100/100?c" class="w-10 h-10 rounded-full" alt="">
-                                    <div class="ml-4 w-full">
-                                        <span class="font-medium">Harry Potter</span>
-                                        <span class="text-xs text-gray-500 flex items-center justify-between w-full">
-                                        <span>Il y a 1O secondes</span>
-                                        <span></span>
-                                    </span>
-                                    </div>
-                                </div>
-                                <p class="mt-4 w-full">Lorem ipsum dolor sit amet !!</p>
-                            </div>
-                        </li>
-                        <!-- /Comment -->
+                        {% include 'details/parts/_comment.html.twig' %}
                     </ul>
                     <form class="mt-9 bg-gray-100 p-4 rounded-lg">
                         <h3 class="text-center text-md font-bold my-4">Réagir / commenter le film ?</h3>

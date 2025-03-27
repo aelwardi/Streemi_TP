@@ -17,31 +17,31 @@ final class HomeController extends AbstractController
     #[Route('/admin-add-films', name: 'app_admin_add_films')]
     public function addFilms(): Response
     {
-        return $this->render('admin_add_films.html.twig');
+        return $this->render('admin/admin_add_films.html.twig');
     }
 
     #[Route('/admin-films', name: 'app_admin_films')]
     public function films(): Response
     {
-        return $this->render('admin_films.html.twig');
+        return $this->render('admin/admin_films.html.twig');
     }
 
     #[Route('/admin-users', name: 'app_admin_users')]
     public function users(): Response
     {
-        return $this->render('admin_users.html.twig');
+        return $this->render('admin/admin_users.html.twig');
     }
 
     #[Route('/admin', name: 'app_admin')]
     public function admin(): Response
     {
-        return $this->render('admin.html.twig');
+        return $this->render('admin/admin.html.twig');
     }
 
     #[Route('/category', name: 'app_category')]
     public function category(): Response
     {
-        return $this->render('category.html.twig');
+        return $this->render('category/category.html.twig');
     }
 
     #[Route('/confirm', name: 'app_confirm')]
@@ -53,13 +53,13 @@ final class HomeController extends AbstractController
     #[Route('/detail-serie', name: 'app_detail_serie')]
     public function detailSerie(): Response
     {
-        return $this->render('detail_serie.html.twig');
+        return $this->render('details/detail_serie.html.twig');
     }
 
     #[Route('/detail', name: 'app_detail')]
     public function detail(): Response
     {
-        return $this->render('detail.html.twig');
+        return $this->render('details/detail.html.twig');
     }
 
     #[Route('/discover', name: 'app_discover')]
@@ -83,13 +83,13 @@ final class HomeController extends AbstractController
     #[Route('/login', name: 'app_login')]
     public function login(): Response
     {
-        return $this->render('login.html.twig');
+        return $this->render('auth/login.html.twig');
     }
 
     #[Route('/register', name: 'app_register')]
     public function register(): Response
     {
-        return $this->render('register.html.twig');
+        return $this->render('auth/register.html.twig');
     }
 
     #[Route('/reset', name: 'app_reset')]

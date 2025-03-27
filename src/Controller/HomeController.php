@@ -11,7 +11,7 @@ final class HomeController extends AbstractController
     #[Route('/home', name: 'app_home')]
     public function index(): Response
     {
-        return $this->render('index.html.twig');
+        return $this->render('home/index.html.twig');
     }
 
     #[Route('/admin-add-films', name: 'app_admin_add_films')]
@@ -47,7 +47,7 @@ final class HomeController extends AbstractController
     #[Route('/confirm', name: 'app_confirm')]
     public function confirm(): Response
     {
-        return $this->render('confirm.html.twig');
+        return $this->render('auth/confirm.html.twig');
     }
 
     #[Route('/detail-serie', name: 'app_detail_serie')]
@@ -65,19 +65,19 @@ final class HomeController extends AbstractController
     #[Route('/discover', name: 'app_discover')]
     public function discover(): Response
     {
-        return $this->render('discover.html.twig');
+        return $this->render('discover/discover.html.twig');
     }
 
     #[Route('/forgot', name: 'app_forgot')]
     public function forgot(): Response
     {
-        return $this->render('forgot.html.twig');
+        return $this->render('auth/forgot.html.twig');
     }
 
     #[Route('/lists', name: 'app_lists')]
     public function lists(): Response
     {
-        return $this->render('lists.html.twig');
+        return $this->render('lists/lists.html.twig');
     }
 
     #[Route('/login', name: 'app_login')]
@@ -95,18 +95,18 @@ final class HomeController extends AbstractController
     #[Route('/reset', name: 'app_reset')]
     public function reset(): Response
     {
-        return $this->render('reset.html.twig');
+        return $this->render('auth/reset.html.twig');
     }
 
     #[Route('/subscriptions', name: 'app_subscriptions')]
     public function subscriptions(): Response
     {
-        return $this->render('subscriptions.html.twig');
+        return $this->render('subscriptions/subscriptions.html.twig');
     }
 
     #[Route('/upload', name: 'app_upload')]
     public function upload(): Response
     {
-        return $this->render('upload.html.twig');
+        return $this->render('upload/upload.html.twig');
     }
 }
